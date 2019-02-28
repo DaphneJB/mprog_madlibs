@@ -17,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void startClicked(View view) {
-        System.out.println("test");
         startActivity(new Intent(this, Welcome.class));
     }
 }
