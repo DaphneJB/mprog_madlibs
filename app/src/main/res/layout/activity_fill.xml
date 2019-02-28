@@ -38,7 +38,6 @@
             android:layout_height="match_parent"
             android:layout_marginStart="20dp"
             android:ems="10"
-            android:fontFamily="sans-serif-medium"
             android:inputType="textPersonName"
             app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteY="112dp" />
