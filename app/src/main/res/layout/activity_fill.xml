@@ -20,10 +20,11 @@
 
     <TextView
         android:id="@+id/wordsLeft"
-        android:layout_width="107dp"
+        android:layout_width="match_parent"
         android:layout_height="19dp"
         android:layout_gravity="center_horizontal"
         android:text="TextView"
+        android:textAlignment="center"
         tools:layout_editor_absoluteX="140dp"
         tools:layout_editor_absoluteY="98dp" />
 
@@ -37,8 +38,8 @@
             android:layout_height="match_parent"
             android:layout_marginStart="20dp"
             android:ems="10"
+            android:fontFamily="sans-serif-medium"
             android:inputType="textPersonName"
-            android:text="Name"
             app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteY="112dp" />
 
@@ -46,6 +47,7 @@
             android:id="@+id/button"
             android:layout_width="76dp"
             android:layout_height="42dp"
+            android:onClick="onClick"
             android:text="OK"
             tools:layout_editor_absoluteX="285dp"
             tools:layout_editor_absoluteY="119dp" />
@@ -53,10 +55,11 @@
 
     <TextView
         android:id="@+id/neededWord"
-        android:layout_width="106dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="TextView"
+        android:textAlignment="center"
         tools:layout_editor_absoluteX="140dp"
         tools:layout_editor_absoluteY="175dp" />
 
