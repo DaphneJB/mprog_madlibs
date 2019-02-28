@@ -11,7 +11,7 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
-        android:layout_height="398dp"
+        android:layout_height="200dp"
         android:layout_marginTop="68dp"
         android:layout_marginBottom="137dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -19,7 +19,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/madlib" />
 
     <TextView
@@ -39,11 +39,11 @@
         android:id="@+id/start"
         android:layout_width="138dp"
         android:layout_height="59dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="28dp"
         android:onClick="startClicked"
         android:text="START!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>

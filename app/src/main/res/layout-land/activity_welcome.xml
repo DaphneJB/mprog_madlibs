@@ -9,7 +9,7 @@
     <TextView
         android:id="@+id/textView5"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="113dp"
         android:layout_weight="0"
         android:padding="10dp"
         android:text="Welcome to Mad Libs! I will ask you to fill in words to complete a story. You won't be able to see the whole story until you are done filling in all the missing words. That's part of the fun! Click on the story you want to complete!"
@@ -17,8 +17,8 @@
 
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="149dp"
+        android:layout_height="200dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="168dp"
         android:layout_weight="0"
