@@ -20,7 +20,7 @@
     <TextView
         android:id="@+id/story"
         android:layout_width="match_parent"
-        android:layout_height="484dp"
+        android:layout_height="220dp"
         android:padding="10dp"
         android:text="TextView"
         android:textAlignment="center"
