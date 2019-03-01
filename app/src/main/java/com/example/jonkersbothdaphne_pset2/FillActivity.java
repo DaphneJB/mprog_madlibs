@@ -16,6 +16,7 @@ import org.w3c.dom.Text;
 public class FillActivity extends AppCompatActivity {
     Story retrievedStory;
     EditText word;
+    TextView neededWord, wordsLeft;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,15 +25,7 @@ public class FillActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         retrievedStory = (Story) intent.getSerializableExtra("story");
-
-        TextView neededWord = findViewById(R.id.neededWord);
-        neededWord.setText("please type a/an " + retrievedStory.getNextPlaceholder().toLowerCase());
-
-        TextView wordsLeft = findViewById(R.id.wordsLeft);
-        wordsLeft.setText(retrievedStory.getPlaceholderRemainingCount() +" word(s) left");
-
-        word = findViewById(R.id.word);
-        word.setHint(retrievedStory.getNextPlaceholder().toLowerCase());
+        updateScreen();
     }
 
     public void onClick(View view) {
@@ -43,9 +36,22 @@ public class FillActivity extends AppCompatActivity {
             startActivity(intent);
         }
         else{
-            Intent intent = new Intent(this, FillActivity.class);
-            intent.putExtra("story", retrievedStory);
-            startActivity(intent);
+            word.setText("");
+            neededWord.setText("");
+            wordsLeft.setText("");
+            updateScreen();
         }
+    }
+
+    public void updateScreen() {
+
+        neededWord = findViewById(R.id.neededWord);
+        neededWord.setText("please type a/an " + retrievedStory.getNextPlaceholder().toLowerCase());
+
+        wordsLeft = findViewById(R.id.wordsLeft);
+        wordsLeft.setText(retrievedStory.getPlaceholderRemainingCount() +" word(s) left");
+
+        word = findViewById(R.id.word);
+        word.setHint(retrievedStory.getNextPlaceholder().toLowerCase());
     }
 }

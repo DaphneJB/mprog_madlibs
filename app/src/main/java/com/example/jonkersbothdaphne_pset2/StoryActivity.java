@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.StyleSpan;
@@ -22,7 +23,7 @@ public class StoryActivity extends AppCompatActivity {
         Intent intent = getIntent();
         Story retrievedStory = (Story) intent.getSerializableExtra("story");
         TextView tale = findViewById(R.id.story);
-        tale.setText(retrievedStory.toString()); //show story
+        tale.setText(Html.fromHtml(retrievedStory.toString(), 0)); //show story
     }
     @Override
     public void onBackPressed() {

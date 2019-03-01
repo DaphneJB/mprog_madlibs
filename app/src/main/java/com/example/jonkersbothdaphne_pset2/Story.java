@@ -19,6 +19,7 @@ package com.example.jonkersbothdaphne_pset2;/*
 // !YOU MAY WANT TO CHANGE THE PACKAGE BELOW SO THAT IT MATCHES YOUR PROJECT'S PACKAGE!
 
 import android.graphics.Typeface;
+import android.text.Html;
 
 import java.io.*;
 import java.util.*;
@@ -34,7 +35,7 @@ public class Story implements Serializable {
         text = "";
         placeholders = new ArrayList<String>();
         filledIn = 0;
-        htmlMode = false;
+        htmlMode = true;
         clear();
     }
 
@@ -53,7 +54,7 @@ public class Story implements Serializable {
     /** replaces the next unfilled placeholder with the given word */
     public void fillInPlaceholder(String word) {
         if (!isFilledIn()) {
-            text = text.replace("<" + filledIn + ">", word);
+            text = text.replace("<" + filledIn + ">", "<b>"+word+"</b>");
             filledIn++;
         }
     }
