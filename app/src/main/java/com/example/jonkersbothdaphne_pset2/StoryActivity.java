@@ -25,16 +25,10 @@ public class StoryActivity extends AppCompatActivity {
         TextView tale = findViewById(R.id.story);
         tale.setText(Html.fromHtml(retrievedStory.toString(), 0)); //show story
     }
-    @Override
-    public void onBackPressed() {
-
-        Intent intent = new Intent(this, MainActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(intent); //go back to the home screen
-    }
 
     public void newStoryClicked(View view) {
         Intent intent = new Intent(this, Welcome.class);
         startActivity(intent); //go back to the story chooser menu
+        finish();
     }
 }

@@ -34,6 +34,7 @@ public class FillActivity extends AppCompatActivity {
             Intent intent = new Intent(this, StoryActivity.class);
             intent.putExtra("story", retrievedStory);
             startActivity(intent);
+            finish();
         }
         else{
             word.setText("");

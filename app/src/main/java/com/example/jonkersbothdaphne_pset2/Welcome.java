@@ -35,6 +35,7 @@ public class Welcome extends AppCompatActivity {
         Intent intent = new Intent(this, FillActivity.class);
         intent.putExtra("story", story);
         startActivity(intent);
+        finish();
 
     }
 
