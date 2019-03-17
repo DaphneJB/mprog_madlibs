@@ -14,9 +14,9 @@ import android.widget.TextView;
 import org.w3c.dom.Text;
 
 public class FillActivity extends AppCompatActivity {
-    Story retrievedStory;
-    EditText word;
-    TextView neededWord, wordsLeft;
+    private Story retrievedStory;
+    private EditText word;
+    private TextView neededWord, wordsLeft;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
