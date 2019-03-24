@@ -12,7 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
-
+//represents the filling in of words to complete the story
 public class FillActivity extends AppCompatActivity {
     private Story retrievedStory;
     private EditText word;
@@ -29,14 +29,17 @@ public class FillActivity extends AppCompatActivity {
     }
 
     public void onClick(View view) {
+        //fill the placeholder
         retrievedStory.fillInPlaceholder(word.getText().toString());
-        if(retrievedStory.getPlaceholderRemainingCount() == 0){ //last placeholder is filled in
+        //check if there are no more placeholder to fill
+        if(retrievedStory.getPlaceholderRemainingCount() == 0) {
             Intent intent = new Intent(this, StoryActivity.class);
             intent.putExtra("story", retrievedStory);
             startActivity(intent);
             finish();
         }
-        else{
+        else {
+            //clean screen
             word.setText("");
             neededWord.setText("");
             wordsLeft.setText("");
@@ -44,8 +47,8 @@ public class FillActivity extends AppCompatActivity {
         }
     }
 
+    //show the word category of the next placeholder
     public void updateScreen() {
-
         neededWord = findViewById(R.id.neededWord);
         neededWord.setText("please type a/an " + retrievedStory.getNextPlaceholder().toLowerCase());
 

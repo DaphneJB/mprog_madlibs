@@ -9,7 +9,7 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import java.io.InputStream;
-
+//Represents a setting menu where the user can choose the kind of story
 public class Welcome extends AppCompatActivity {
     int[][] selectedStory = {{R.id.tarzan, R.raw.madlib_tarzan}, {R.id.clothes, R.raw.madlib_clothes},
             {R.id.dance, R.raw.madlib_dance}, {R.id.simple, R.raw.madlib_simple}, {R.id.university,
@@ -41,11 +41,12 @@ public class Welcome extends AppCompatActivity {
 
     public Story makeStory(int buttonSelect){
         int i;
+        //get the selected story
         for(i =0; i<selectedStory.length; i++) {
-                if (buttonSelect == selectedStory[i][0]) {
-                    break; //get the story that is selected by the button
-                }
+            if (buttonSelect == selectedStory[i][0]) {
+                break;
             }
+        }
         InputStream tale = getResources().openRawResource(selectedStory[i][1]);
         Story story = new Story(tale);
         return story;

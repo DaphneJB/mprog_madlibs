@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
-
+//shows the homescreen
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -14,7 +14,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-
 
     public void startClicked(View view) {
         startActivity(new Intent(this, Welcome.class));
