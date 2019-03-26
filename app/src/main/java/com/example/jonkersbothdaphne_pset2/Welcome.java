@@ -30,13 +30,13 @@ public class Welcome extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), selectedButton.getText().toString()+" is selected", Toast.LENGTH_SHORT).show();
     }
 
+    //start the game with the selected story
     public void applyClicked(View view) {
         Story story = makeStory(selected);
         Intent intent = new Intent(this, FillActivity.class);
         intent.putExtra("story", story);
         startActivity(intent);
         finish();
-
     }
 
     public Story makeStory(int buttonSelect){

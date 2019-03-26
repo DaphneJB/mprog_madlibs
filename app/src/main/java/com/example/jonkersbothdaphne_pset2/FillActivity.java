@@ -22,7 +22,6 @@ public class FillActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fill);
-
         Intent intent = getIntent();
         retrievedStory = (Story) intent.getSerializableExtra("story");
         updateScreen();
@@ -47,14 +46,12 @@ public class FillActivity extends AppCompatActivity {
         }
     }
 
-    //show the word category of the next placeholder
+    //show the word category of the next placeholder and the amount of words left
     public void updateScreen() {
         neededWord = findViewById(R.id.neededWord);
         neededWord.setText("please type a/an " + retrievedStory.getNextPlaceholder().toLowerCase());
-
         wordsLeft = findViewById(R.id.wordsLeft);
         wordsLeft.setText(retrievedStory.getPlaceholderRemainingCount() +" word(s) left");
-
         word = findViewById(R.id.word);
         word.setHint(retrievedStory.getNextPlaceholder().toLowerCase());
     }
